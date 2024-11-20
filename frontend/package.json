@@ -1,23 +1,35 @@
 {
-  "name": "frappe-ui-frontend",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "feather-icons": "^4.28.0",
-    "frappe-ui": "^0.0.105",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.12"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.0.0",
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.15",
-    "vite": "^2.7.2"
-  }
+	"name": "sheets-ui",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build --base=/assets/sheets/frontend/ && yarn copy-html-entry",
+		"copy-html-entry": "cp ../sheets/public/frontend/index.html ../sheets/www/sheets.html",
+		"serve": "vite preview"
+	},
+	"dependencies": {
+		"@vitejs/plugin-vue": "^4.2.3",
+		"@vueuse/components": "^10.11.1",
+		"@vueuse/core": "^10.11.1",
+		"ace-builds": "^1.36.2",
+		"autoprefixer": "^10.4.2",
+		"feather-icons": "^4.28.0",
+		"frappe-ui": "^0.1.69",
+		"lucide-vue-next": "^0.427.0",
+		"pinia": "^2.2.1",
+		"vite": "^4.4.9",
+		"vue": "^3.4.12",
+		"vue-router": "^4.2.2",
+		"vuedraggable": "^4.1.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.39.0",
+		"eslint-plugin-vue": "^9.11.0",
+		"postcss": "^8.4.5",
+		"prettier": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.6",
+		"tailwindcss": "^3.4.3",
+		"typescript": "^5.5.4"
+	}
 }
