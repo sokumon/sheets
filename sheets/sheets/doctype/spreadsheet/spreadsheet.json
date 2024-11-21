@@ -8,6 +8,7 @@
  "field_order": [
   "title",
   "created_by",
+  "created_on",
   "last_modified",
   "content",
   "size"
@@ -37,11 +38,16 @@
    "fieldname": "size",
    "fieldtype": "Int",
    "label": "Size"
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-20 01:43:09.285576",
+ "modified": "2024-11-21 12:13:49.862565",
  "modified_by": "Administrator",
  "module": "Sheets",
  "name": "Spreadsheet",
