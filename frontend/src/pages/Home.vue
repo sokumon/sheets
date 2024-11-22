@@ -49,12 +49,14 @@ export default {
       ],
       rows: [{
           id: 1,
+          name:"Test",
           created_by:"Administrator",
           last_modified: "2024-11-21 13:54:06.688854",
           size: "0 KB",
           title: "Untitled Spreadsheet",
       }],
       options: {
+        getRowRoute: (row) => ({ name: "Spreadsheet", params: { sheetId: row.name } }),
         selectable: false,
         showTooltip: false,
         resizeColumn: false,
@@ -69,6 +71,11 @@ export default {
           title: "Untitled Spreadsheet",
           content: null
       })
+      this.$router.push({
+          name: "Spreadsheet",
+          params: { sheetId: this.sheet.name },
+      })
+
     },
     humanDate(datestring){
       let dateObj = new Date(datestring)
@@ -121,6 +128,7 @@ export default {
         auto: false,
         onSuccess(data){
           console.log(data)
+          this.sheet = data
           // router push will happen here
         },
         beforeSubmit(params) {

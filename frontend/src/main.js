@@ -13,5 +13,7 @@ setConfig('resourceFetcher', frappeRequest)
 app.use(router)
 app.use(resourcesPlugin)
 
+app.config.globalProperties.DataTable = DataTable
+app.config.globalProperties.Engine = Engine
 app.component('Button', Button)
 app.mount('#app')
